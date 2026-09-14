@@ -25,7 +25,7 @@ header {
 }
 
 nav a {
-    color: rgb(0, 0, 255); 
+    color: white;
     text-decoration: none;
     margin: 10px;
 }
@@ -55,9 +55,7 @@ input, textarea {
     padding: 8px 15px;
 }
 
-#cta {
-    background: rgb(255, 255, 255); 
-}
+
 
 footer {
     background-color: #333;
