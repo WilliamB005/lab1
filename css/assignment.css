@@ -1,0 +1,220 @@
+/* ==========================================================================
+   1. CSS Variables & Theme (Slate & Indigo Palette)
+   ========================================================================== */
+   :root {
+    --bg-body: #f8fafc;        /* Very light slate */
+    --bg-card: #ffffff;
+    --bg-input: #f1f5f9;
+    
+    --text-primary: #0f172a;   /* Deep slate for high contrast */
+    --text-secondary: #475569; /* Muted slate for readability */
+    --text-label: #64748b;
+    
+    --accent-main: #4f46e5;    /* Vibrant Indigo */
+    --accent-hover: #4338ca;
+    --focus-ring: rgba(79, 70, 229, 0.15);
+    
+    --border-light: #e2e8f0;
+    --border-input: #cbd5e1;
+    
+    --radius-lg: 16px;
+    --radius-md: 8px;
+    --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+}
+
+/* ==========================================================================
+   2. Global Reset & Base Styles
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 2rem 1.5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   3. Typography
+   ========================================================================== */
+h1 {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em; /* Tighter letter spacing for professional look */
+    margin-bottom: 0.25rem;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 2rem;
+}
+
+p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.75;
+}
+
+p:last-of-type {
+    margin-bottom: 0;
+}
+
+.accent-text {
+    color: var(--accent-main);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   4. Layout & Containers
+   ========================================================================== */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-premium);
+    overflow: hidden; /* Keeps the image inside the rounded corners */
+}
+
+/* --- Bio Section --- */
+.bio-section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Desktop Layout */
+@media (min-width: 800px) {
+    .bio-section {
+        flex-direction: row;
+    }
+}
+
+.photo-wrapper {
+    flex: 0 0 40%; /* Takes up 40% of the width on desktop */
+    position: relative;
+}
+
+.photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    min-height: 350px;
+}
+
+.bio-content {
+    flex: 1;
+    padding: 3rem 2rem;
+}
+
+@media (min-width: 800px) {
+    .bio-content {
+        padding: 4.5rem 4rem;
+    }
+}
+
+/* ==========================================================================
+   5. Contact Form Section
+   ========================================================================== */
+.contact-section {
+    padding: 4rem 2rem;
+    background-color: #fcfcfd;
+    border-top: 1px solid var(--border-light);
+}
+
+.form-wrapper {
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.form-wrapper h2 {
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 2.5rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-label);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+input, textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background-color: var(--bg-input);
+    padding: 0.875rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Form Interactivity */
+input::placeholder, textarea::placeholder {
+    color: #94a3b8;
+}
+
+input:hover, textarea:hover {
+    border-color: var(--border-input);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    background-color: var(--bg-card);
+    border-color: var(--accent-main);
+    box-shadow: 0 0 0 4px var(--focus-ring);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* --- Submit Button --- */
+.submit-btn {
+    width: 100%;
+    background-color: var(--accent-main);
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-hover);
+    box-shadow: 0 6px 12px -2px rgba(79, 70, 229, 0.3);
+    transform: translateY(-1px);
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px -1px rgba(79, 70, 229, 0.2);
+}

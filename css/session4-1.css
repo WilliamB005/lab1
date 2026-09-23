@@ -1,0 +1,120 @@
+/* =========================
+   Navbar
+   ========================= */
+
+/* Selects the element with the class "navbar" */
+.navbar {
+    /* Makes the navbar a flex container.
+       This allows its items to be placed next to each other. */
+    display: flex;
+
+    /* Puts the first item on the left
+       and the last item on the right. */
+    justify-content: space-between;
+
+    /* Aligns items vertically in the center.
+       Currently commented out, so it does NOT apply. */
+    /* align-items: center; */
+
+    /* Sets the navbar background to dark gray. */
+    background-color: #1e1e1e;
+
+    /* Makes the text inside the navbar white. */
+    color: white;
+
+    /* Adds space inside the navbar:
+       20px top/bottom and 40px left/right. */
+    padding: 20px 40px;
+}
+
+
+/* =========================
+   Logo
+   ========================= */
+
+/* Selects the element with the class "logo" */
+.logo {
+    /* Makes the logo text 24 pixels large. */
+    font-size: 24px;
+
+    /* Makes the logo text bold. */
+    font-weight: bold;
+}
+
+
+/* =========================
+   Links
+   ========================= */
+
+/* Selects the element containing the links */
+.links {
+    /* Places the links next to each other horizontally. */
+    display: flex;
+
+    /* Adds 40px of space between each link. */
+    gap: 40px;
+}
+
+
+/* Selects <a> elements inside the .links element */
+.links a {
+    /* Makes the link text white. */
+    color: white;
+
+    /* Removes the default underline from links. */
+    text-decoration: none;
+}
+
+
+/* =========================
+   Cards Container
+   ========================= */
+
+/* Selects the element with the class "container" */
+.container {
+    /* Places the cards next to each other horizontally. */
+    display: flex;
+
+    /* Centers all the cards horizontally. */
+    justify-content: center;
+
+    /* Adds 20px of space between each card. */
+    gap: 20px;
+
+    /* Adds 40px of space inside the container
+       around the cards. */
+    padding: 40px;
+}
+
+
+/* =========================
+   Card
+   ========================= */
+
+/* Selects elements with the class "card" */
+.card {
+    /* Sets the card's width to 300px. */
+    width: 300px;
+
+    /* Gives the card a white background. */
+    background-color: white;
+
+    /* Rounds the corners of the card by 10px. */
+    border-radius: 10px;
+
+    /* Adds 20px of space inside the card,
+       between the content and the edges. */
+    padding: 20px;
+
+    /* Adds a shadow around the card.
+       0px = no horizontal movement
+       4px = shadow moves down
+       8px = blur amount
+       rgba(...) = black with 20% opacity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    /* Makes the width include the padding.
+       So the total width stays at 300px
+       instead of becoming 340px (300 + 40 padding). */
+    box-sizing: border-box;
+}

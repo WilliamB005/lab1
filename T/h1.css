@@ -1,0 +1,92 @@
+.c1 {
+    width: 300px;
+    background-color: #f60000;
+    border-radius: 10px;
+    padding: 20px;
+    /*  padding is used to create space around an element's content, inside of any defined borders. */
+    margin: 20px auto;
+    /*  margin is used to create space around elements, outside of any defined borders. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /*  box-shadow is used to add shadow effects around an element's frame. */
+    box-sizing: border-box;
+    flex: 1 1 200px; /* Allow cards to grow and shrink, with a base width of 200px */
+}
+.c2 {
+    width: 300px;
+    background-color: #00ff62;
+    border-radius: 10px;
+    padding: 20px;
+    /*  padding is used to create space around an element's content, inside of any defined borders. */
+    margin: 20px auto;
+    /*  margin is used to create space around elements, outside of any defined borders. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /*  box-shadow is used to add shadow effects around an element's frame. */
+    box-sizing: border-box;
+    flex: 1 1 200px; /* Allow cards to grow and shrink, with a base width of 200px */
+}
+@medi (min-width: 768px) {
+    .card {
+        flex= 1 1 45%; /* On larger screens, cards will take up 45% of the container width */
+    }
+}
+.cw{
+    width: 300px;
+    background-color: #0279e1;
+    border-radius: 10px;
+    padding: 20px;
+    /*  padding is used to create space around an element's content, inside of any defined borders. */
+    margin: 20px auto;
+    /*  margin is used to create space around elements, outside of any defined borders. */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    /*  box-shadow is used to add shadow effects around an element's frame. */
+    box-sizing: border-box;
+    flex: 1 1 200px; /* Allow cards to grow and shrink, with a base width of 200px */
+}
+.links a {
+    color: white;
+    text-decoration: none;
+    
+}
+@media (min-width: 768px) {
+    .card {
+        flex= 1 1 45%; /* On larger screens, cards will take up 45% of the container width */
+    }
+}
+@media (min-width: 1024px) {
+    .card {
+        flex: 1 1 30%; /* On even larger screens, cards will take up 30% of the container width */
+    }
+}
+@media (max-width=502px){[
+    .card {
+        flex: 1 1 100%; /* On smaller screens, cards will take up the full width of the container */
+
+    }
+]
+.grid{
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+}
+.grid{
+    display:grid;
+    grid-template-columns: repeat(3,2fr);
+/* here repeat(3,2fr) means that the grid will have 3 columns, each taking up 2 fractions of the available space. 3 means the number of columns, and 2fr means two fractions of the available space. */  
+    grid-template-rows: repeat(2,1fr);
+    /*  here repeat(2,1fr) means that the grid will have 2 rows, each taking up an equal fraction of the available space. 2 means the number of rows, and 1fr means one fraction of the available space. */
+
+}
+.grid{
+    grid-template-columns: repeat(3,1fr);
+    /* /* here repeat(3,1fr) means that the grid will have 3 columns, each taking up an equal fraction of the available space. 3 means the number of columns, and 1fr means one fraction of the available space.
+     */
+}
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}

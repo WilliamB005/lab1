@@ -1,0 +1,45 @@
+h1 {
+    color: #00ff7b;
+    text-align: center;
+
+}
+.card >h1 {
+    color: #00ff7b;
+    text-align: center;
+}
+h1 ~ p {
+    color: #ffffff;
+    text-align: center;
+}
+
+.card {
+    width : 300px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+#item {
+    background-color: #00ffa2;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    color: #000000;
+}
+.card-item {
+    background-color: #00ffc3;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    color: #000000;
+}
+.item {
+    background-color: #00ff2f;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    color: #000000;
+}
