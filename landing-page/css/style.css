@@ -1,0 +1,143 @@
+/* --- Design System & Base Variables --- */
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --text-main: #1f2937;
+  --text-muted: #4b5563;
+  --bg-light: #f9fafb;
+  --bg-card: #ffffff;
+  
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+/* --- Flexbox Utility Classes --- */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* --- CSS Grid Layout (Mobile First) --- */
+.page-grid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.main-content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  padding: var(--space-lg) var(--space-md);
+}
+
+/* --- Component Styles --- */
+.site-header, .site-footer {
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--bg-card);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.site-footer {
+  border-bottom: none;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+}
+
+.nav-links a, .footer-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.hero {
+  text-align: center;
+  align-items: center;
+  padding-top: var(--space-lg);
+}
+
+.hero p {
+  color: var(--text-muted);
+  max-width: 600px;
+}
+
+.button-group {
+  justify-content: center;
+  margin-top: var(--space-sm);
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.features {
+  text-align: center;
+  align-items: center;
+}
+
+.card {
+  background: var(--bg-card);
+  padding: var(--space-lg);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.symbol {
+  font-size: 2.5rem;
+}
+
+/* --- Media Queries (Desktop Layout) --- */
+@media (min-width: 768px) {
+  .main-content-grid {
+    padding: var(--space-xl) 10%;
+  }
+
+  .features-wrapper {
+    flex-direction: row; /* Converts column of cards to a row on larger screens */
+    align-items: stretch;
+  }
+  
+  .card {
+    flex: 1; /* Ensures all cards take up equal space in the row */
+  }
+}
